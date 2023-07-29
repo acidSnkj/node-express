@@ -1,0 +1,33 @@
+{
+  "name": "node-express",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "node express project",
+  "repository": "git@github.com:acidSnkj/node-express.git",
+  "author": "jorgerivera_dev@protonmail.com",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "serve": "nodemon src/index.js",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --watchAll",
+    "pre-commit-test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "eslint": "^8.45.0",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "jest": "^29.6.2",
+    "lint-staged": "^13.2.3",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.0"
+  }
+}
