@@ -1,5 +1,4 @@
 const museumCount = async (req, res) => {
-  console.log('reqs', req.body.payload);
   const payload = req.params.payload || req.body.payload;
   await serializerMsg(payload)
     .then((response) => {
